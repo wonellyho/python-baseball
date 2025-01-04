@@ -134,6 +134,6 @@ computer = random.sample(range(1, 10), 3)
 
 ## ✏️ 과제 진행 요구 사항
 
-- 미션은 [python-baseball](https://github.com/swthewhite/python-baseball) 저장소를 Fork & Clone해 시작합니다.
+- 미션은 [python-baseball](https://github.com/swthewhite-lab/python-baseball) 저장소를 Fork & Clone해 시작합니다.
 - **기능을 구현하기 전 `docs/README.md`에 구현할 기능 목록을 정리**해 추가합니다.
 - **Git의 커밋 단위는 기능 목록 단위**로 추가합니다.
