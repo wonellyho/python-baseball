@@ -21,6 +21,8 @@ def restart_game():
             return False
         elif user_choice==1:
             return True
+        else:
+            raise ValueError("1 또는 2만 입력하세요")
 
 def main():
 
@@ -39,12 +41,17 @@ def main():
         com_num_lst=random.sample(range(1,10),3)
         
         while(1):
-        # 숫자확인용
-            print(com_num_lst)
+            
+            # 숫자확인용
+            # print(com_num_lst)
             
             
             #문자열로 받아오기
             user_num=input("숫자를 입력해주세요 : ")
+            
+            #예외처리
+            if len(user_num)!=3 or any(int(num)<1 for num in user_num):
+                raise ValueError("1~9의 숫자들로 세자리를 입력하세요 ")
             
             ball=0
             strike=0
@@ -67,13 +74,13 @@ def main():
             
             
             if strike==3:
-                print("3개의 숫자를 모두 맞히셨습니다! 게임종료")
+                print("3개의 숫자를 모두 맞히셨습니다! 게임 종료")
                 
                 if restart_game():
-                    #True면 새게임 시작
+                    #True->새게임 시작
                     break 
                 else:
-                    #False면 main함수 종료
+                    #False->main함수 종료
                     return 0
 
                 
